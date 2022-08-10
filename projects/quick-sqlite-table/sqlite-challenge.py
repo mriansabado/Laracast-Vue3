@@ -10,6 +10,7 @@ cursor.execute(
 )
 
 
+
 usersToInsert = [
     ("Tina", "Mccoy", "tmccoy@gmail.com"),
     ("Joan", "Ruiz", "jruiz@gmail.com"),
@@ -18,11 +19,11 @@ usersToInsert = [
     ("Amanda", "Butler", "abutler@gmail.com"),
 ]
 
-# cursor.executemany(
-#     '''INSERT INTO Users(first_name, last_name, email_address) VALUES (?,?,?)''', usersToInsert)
+cursor.executemany(
+    '''INSERT INTO Users(first_name, last_name, email_address) VALUES (?,?,?)''', usersToInsert)
 
-# cursor.execute("SELECT email_address FROM Users")
-# print(cursor.fetchall())
+cursor.execute("SELECT email_address FROM Users")
+print(cursor.fetchall())
 
 cursor.execute(
     """UPDATE Users
