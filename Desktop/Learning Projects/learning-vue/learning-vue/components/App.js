@@ -5,6 +5,7 @@ export default {
 
     template: `
     <Assignments></Assignments>
+    <h1></h1>
     `,
     
 };
